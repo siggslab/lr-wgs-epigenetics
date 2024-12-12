@@ -1,0 +1,39 @@
+working_directory: '/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/outputs/blood_x_cd4'
+threads: 8
+subsampling:
+  samples:
+    PGXXOX240045:
+      name: 'Myeloid_Female'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240045_pass_sup.sorted.retagged.bam'
+      weight: 7.5
+      n_reads: 14415795
+    PGXXOX240047:
+      name: 'B_Cell_Female'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240047_pass_sup.sorted.retagged.bam'
+      weight: 5
+      n_reads: 10066037
+    PGXXOX240048:
+      name: 'CD4_Female'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240048_pass_sup.sorted.retagged.bam'
+      weight: 0
+      n_reads: 13196103
+    PGXXOX240049:
+      name: 'CD8_Female'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240049_pass_sup.sorted.retagged.bam'
+      weight: 12.5
+      n_reads: 13118764
+    PGXXOX240050:
+      name: 'Neutrophill_2'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240050_pass_sup.sorted.retagged.bam'
+      weight: 50
+      n_reads: 8781207
+    PGXXOX240051:
+      name: 'NK_Female'
+      path: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/align_out/PGXXOX240051_pass_sup.sorted.retagged.bam'
+      weight: 7.5
+      n_reads: 9912801
+
+  total_reads: 20000000
+illumina_mapping_file: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/methatlas/sites_mapping.txt'
+methatlas_path: '/home/yvefon/programs/meth_atlas'
+blocks_file: '/share/ScratchGeneral/GenomicMedicine/CIRCA_somatic/misc/ShreeData/wgbs/all.blocks'

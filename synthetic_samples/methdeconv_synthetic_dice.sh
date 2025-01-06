@@ -9,4 +9,4 @@ config=$(sed -n "${SGE_TASK_ID}p" ./configs.txt)
 # $SGE_TASK_ID is from the job submission system on the compute cluster used to run this
 # it's basically an index, and can be replaced with an equivalent for loop over the lines in configs.txt
 
-python ~/scripts/synthetic_sample_methatlas.py "${config}"
+python synthetic_sample_methatlas.py "${config}"

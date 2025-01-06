@@ -1,16 +1,12 @@
 #!/bin/bash
-#$ -S /bin/bash
-#$ -o $HOME/jobs_logs
-#$ -e $HOME/jobs_logs
-#$ -cwd
-#$ -q short.q
-#$ -N syntehtic_methdeconv
-#$ -l mem_requested=16G
-#$ -pe smp 8
-
 source ~/.bashrc && conda activate bamtools
-cd /share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs
+# ^ conda env with bamtools
 
-config=$(sed -n "${SGE_TASK_ID}p" ./configs_dice.txt)
+cd "<INSERT CONFIG FILE DIRECTORY>"
+
+config=$(sed -n "${SGE_TASK_ID}p" ./configs.txt)
+# ^ Text file, listing config files to process, with 1 file per line
+# $SGE_TASK_ID is from the job submission system on the compute cluster used to run this
+# it's basically an index, and can be replaced with an equivalent for loop over the lines in configs.txt
 
 python ~/scripts/synthetic_sample_methatlas.py "${config}"

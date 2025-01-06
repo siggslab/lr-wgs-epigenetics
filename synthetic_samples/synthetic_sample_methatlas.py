@@ -3,7 +3,12 @@ import pysam
 import yaml
 import sys
 
-## Remove any samples with weighting 0, so its easier
+#########################################################
+# Run with python <this_file.py> <config_file.yaml>     #
+# i.e. first and only argument is the config file.      #
+#########################################################
+
+## Remove any samples with weighting 0, so its easier. The step to get read-counts per file is long
 def filter_samples(config):
     samples = config['subsampling']['samples']
     new_samples = {}

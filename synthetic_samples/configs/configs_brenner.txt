@@ -1,7 +1,0 @@
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_neutrophil.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_monocyte.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_cd4.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_cd8.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_nk.yaml
-/share/ScratchGeneral/yvefon/methylDeconv/ShreeData_synthetic_samples/configs/blood_x_b.yaml

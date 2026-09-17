@@ -1,0 +1,19 @@
+Data files in ./data, and all scripts here will need to be edited to correctly point to their relevant data files.
+
+- figure 1.A) made in biorender. No associated code
+
+- figure 1B-D) made with methatlas's deconvolve.py in a live terminal session, adding the --plot flag. No directly associated code.
+	Use of methatlas on the bams is detailed elsewhere. Note that the figures in the manuscript submission have been manually
+	edited to collapse non-relevant cell types into an 'other' category
+
+- figure 1E) made with fig1f_scatter.py with data from ./fig1f_leave_one_out.csv (this is a copy of Supplementary Table 2)
+
+- figure 1F) made with synth_downsample_plots.py with data from {./deconv_out_1.csv, ./deconv_out_2.csv, ./deconv_out_3.csv} 
+	(these are exports of Supplementary Table 12), and with coverage from ./ave_coverage.tsv
+	
+	./ave_coverage.tsv in turn is made by ./calc_avg_coverage.py from
+		{./coverage_20m.tsv, ./coverage_10m.tsv, ./coverage_5m.tsv, ./coverage_2m.tsv,
+		 ./coverage_1m.tsv, ./coverage_500k.tsv, ./coverage_200k.tsv}
+		
+		which are made directly from the samtools command 'samtools coverage' on synthetically sampled bamfiles.
+		The process for creating those synthetically samples bams is detailed elsewhere

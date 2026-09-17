@@ -1,0 +1,16 @@
+Running UXM:
+
+- first, acquire the isolated leukocyte bam files, and synthetic sample bam files as described elsewhere
+
+- Then, run wgbstools on the bamfiles with a command like 'wgbstools bam2pat -@ 8 -np <bamfile>' to generate .pat.gz files
+
+- then on each run uxm with a command of the form 'uxm deconv --atlas <path>/UXM_deconv/supplemental/Atlas.U250.l4.hg38.full.tsv <bamfile>.pat.gz > deconv_out.csv'
+
+- then combine the results into a single table with
+	- copy one of the files 
+		- find . -name "deconv*.csv" | head -1 | xargs -I {} bash -c "cp deconv_out_1.csv uxms.csv"
+	- then merge with every other file
+		- find . -name "deconv*.csv" | tail -n +2 | xargs P 1 -I {} bash -c "paste -d',' ./uxms.csv <(cut -d',' -f2- {}) > tmp && mv tmp ./uxms.csv"
+
+- then plot with ./plot_uxm.py. This is a copy and edit of the original UXM plotting script (https://github.com/nloyfer/UXM_deconv/blob/main/src/plot.py), edited mainly to keep colours consistent with the other plots in the manuscript
+	

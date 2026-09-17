@@ -1,0 +1,31 @@
+- inputs for the nanomix NNLS model generated with live-terminal commands like the provided ./nanomix_nnls_inputs.sh file
+
+- inputs for the nanomix MMSE model generated with live-terminal commands like
+
+	mbtools read-region-frequency -r ATLAS.tsv -g REF.fna --cpg SAMPLE.bam > METHYLOME.tsv
+	
+as described in the nanomix github https://github.com/Jonbroad15/nanomix
+
+- nanomix deconvoltion ran in live terminal with commands like
+
+	nanomix deconvolute -@ 1 \
+        -a /g/data/tn36/yf_conda_envs/nanomix/lib/python3.8/site-packages/nanomix/tests/test_data/39Bisulfite.tsv \
+        -m nnls \
+        Neut.methylome.tsv > Neut.deconv.tsv
+       	
+       	for the mmse model, the -m flag changes to 'mmse', and a --max_iter 50 is included
+       	
+       	nanomix deconvolute -@ 1 \
+        -a /g/data/tn36/yf_conda_envs/nanomix/lib/python3.8/site-packages/nanomix/tests/test_data/39Bisulfite.tsv \
+        -m mmse \
+        --max_iter 50 \
+        Neut.methylome.tsv > Neut.deconv.tsv
+
+- the outputs of multiple deconvolutions can be placed in a single directory, to be combined into a single csv using the script
+./combine_nanomix_tsvs.py which should be edited to point to the correct directories, and line 24 (order = ...) should be edited
+so that samples are in the desired order in the final plot
+
+- Then, the outpt of this script can be plotted with the same ./plot_uxm.py present in the ./supplementary_deconvolution/uxm directory
+(files here are formatted so that that script can accomodate these inputs) 
+
+

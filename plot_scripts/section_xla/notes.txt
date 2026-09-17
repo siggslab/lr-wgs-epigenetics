@@ -1,0 +1,17 @@
+- Figure 3. A) made as a screenshot in IGV with the XLA bam. No associated code
+
+- Figure 3. B) made with methatlas's deconvolve.py in a live terminal session, adding the --plot flag. No directly associated code.
+	Use of methatlas on the bams is detailed elsewhere. Note that the figures in the manuscript submission have been manually
+	edited to collapse non-relevant cell types into an 'other' category
+	
+- Figure 3. C) made with ./plot_deconv_proportions.py (same as found in the ./section_bcll directory. That script contains commented
+	out code to instead produce this plot, and vice versa). Data used is ./Illuminas_deconv_output.csv. 
+	This is an older and less human readable version of Supplementary Table 4, with auto-generated IDs rather than the later assigned
+	REF_N ids, but the data is the same. 
+
+Figure 3. D) made with ./plot_contrasting_bioheart_proportions.py with the same ./Illuminas_deconv_output.csv for the deconvolution based
+	predictions, and CT_Longread_proportions.csv for the scRNAseq based predictons. This file cannot be included in this repository due to 
+	data restrictions, but its format is specified in the plotting file, and it can be generated from data available
+	in the European Genome-phenome Archive (EGA) under accession number EGAS50000001653
+
+Figure 3. E) made with ./plot_bland_altman.py from the same data as Figure 3.D)

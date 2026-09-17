@@ -5,8 +5,6 @@ Code repository for the paper: "Combined genomic and phenotypic classification o
 DOI: https://doi.org/10.1101/2025.05.08.25327265 
 
 
-plot_scripts: brief description of the tools/scripts used to generate each figure,
-and also the scripts used
+plot_scripts: Descriptions + scripts used to create each plot in the manuscript
 
-synthetic_samples: code and settings used to sample the isolated leukocyte samples
-to create synthetic samples
+synthetic_samples: code and settings used to sample the isolated leukocyte samples and create synthetic samples

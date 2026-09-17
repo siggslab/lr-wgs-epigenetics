@@ -1,0 +1,15 @@
+EpiDISH plots were created by
+
+- first, taking relevant bams (isolated leukocytes, and synthetic samples whose creation is described elsewhere)
+	and run 'wgbstools bam2pat -np -@ 8 <bamfile>' to generate .beta files 
+
+- then, run 'wgbstools beta_to_450k <.beta file> --EPIC > betas.csv' to extract illumina array methylation frequencies
+
+- if multiple files, combine into a single csv with, for example
+	- cp beta_1.csv joined.csv
+	- find . --name "beta*.csv" | grep -v "beta_1.csv" | sort | xargs -I {} -P 1 bash -c "join -t$',' joined.csv {} > tmp && mv tmp joined.csv"
+
+- run EpiDISH with a script like the included ./run_epidish.R to generate deconvolution predictions as a csv
+
+- generate a plot from that csv with ./plot_epidish.py (changing the pd.read_csv(<file.csv>) line to point to the correct file, and changing
+the ax.set_title(<title>) to an appropriate title)

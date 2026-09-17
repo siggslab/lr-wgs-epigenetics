@@ -28,6 +28,10 @@ cleaned_2 = cleaned[ , colSums(is.na(cleaned))==0]
 # Run PCA
 rpca = PcaGrid(cleaned_2, k=2)
 
+write.table(rpca$sd, "sd.tsv", sep="\t")
+write.table(rpca$od, "od.tsv", sep='\t')
+write.table(rpca$scores, "scores.tsv", sep='\t')
+
 # Save outlier-y results
 pdf("./outlier_map.pdf", width=12, height=12)
 plot(rpca)

@@ -1,0 +1,10 @@
+- Outlier plots created with the provided ./outliers.R script, or by equivalent code in a live terminal session
+
+- Correct the setwd() call to your current working directory
+
+- Correct the references to methfreqs.tsv to your file of methylation frequencies. This is any file with a header line, and two columns. The first column is referenced in the code as 'SITE' and is the name of the methylation locus. The second is not referenced by name, so it can be named anything, and contains the methylation frequency of that locus. e.g. 0.1, 0.5, 1.0.
+
+- This produces both a PDF which contains the relevant plots, and tables which were used to produce Supplementary Table 13.
+
+- Note, in the manuscript, highlighting specific samples with a coloured triangle was done by identifying the coordinates of those points and
+manually overlaying a triangle

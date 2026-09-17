@@ -1,0 +1,16 @@
+,Neutrophils,Monocytes,CD4 T Cells,CD8 T Cells,B Cells,NK Cells
+WEIGHTING,0.5,0.075,0.175,0.125,0.05,0.075
+Blood,0.497,0.094,0.186,0.077,0.038,0.089
+Blood w/out Neutrophils,0.003,0.146,0.366,0.183,0.079,0.193
+Blood w/out Monocytes,0.526,0.034,0.199,0.083,0.037,0.094
+Blood w/out CD4s,0.591,0.108,0.026,0.086,0.044,0.119
+Blood w/out CD8s,0.561,0.114,0.174,0.000,0.034,0.092
+Blood w/out B Cells,0.529,0.092,0.186,0.087,0.000,0.091
+Blood w/out NK Cells,0.545,0.090,0.203,0.079,0.034,0.017
+WEIGHTING,,0.15,0.35,0.25,0.1,0.15
+PBMCs,,0.138,0.343,0.201,0.088,0.192
+PBMCs w/out Monocytes,,0.007,0.402,0.240,0.100,0.215
+PBMCs w/out CD4s,,0.208,0.022,0.315,0.138,0.287
+PBMCs w/out CD8s,,0.182,0.427,0.000,0.129,0.233
+PBMCs w/out B Cells,,0.139,0.372,0.235,0.000,0.214
+PBMCs w/out NK Cells,,0.158,0.419,0.243,0.107,0.027

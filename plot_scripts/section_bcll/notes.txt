@@ -1,0 +1,12 @@
+- Figure 2. A) Made in BioRender. No associated code
+
+- Figure 2. B) Made in IGV with the B-CLL bamfile. No associated code
+
+- Figure 2. C) made with methatlas's deconvolve.py in a live terminal session, adding the --plot flag. No directly associated code.
+	Use of methatlas on the bams is detailed elsewhere. Note that the figures in the manuscript submission have been manually
+	edited to collapse non-relevant cell types into an 'other' category
+
+- Figure 2. D) made with ./plot_deconv_proportions.py using ./Illumina_ID_frequencies_deconv_output.csv which shares data with
+	Supplementary Table 3. It is an older and less human readable form of Supplementary Table 3, that uses the IDs for samples
+	provided by the TOB, rather that our Ref_N ids, but the data is the same.
+
